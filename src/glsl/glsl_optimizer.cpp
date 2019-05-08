@@ -449,7 +449,7 @@ static void do_optimization_passes(exec_list* ir, bool linked, _mesa_glsl_parse_
 		bool progress2;
 		debug_print_ir ("Initial", ir, state, mem_ctx);
 		if (linked) {
-			progress2 = do_function_inlining(ir); progress |= progress2; if (progress2) debug_print_ir ("After inlining", ir, state, mem_ctx);
+//            progress2 = do_function_inlining(ir); progress |= progress2; if (progress2) debug_print_ir ("After inlining", ir, state, mem_ctx);
 			progress2 = do_dead_functions(ir); progress |= progress2; if (progress2) debug_print_ir ("After dead functions", ir, state, mem_ctx);
 			progress2 = do_structure_splitting(ir); progress |= progress2; if (progress2) debug_print_ir ("After struct splitting", ir, state, mem_ctx);
 		}
